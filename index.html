@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <section>
+    <div class="first-chart">
+      <canvas id="firstChart"></canvas>
+    </div>
+    <div class="second-chart">
+      <canvas id="secondChart"></canvas>
+    </div>
+    <div class="third-chart">
+      <canvas id="thirdChart"></canvas>
+    </div>
+  </section>
+
+  <div class="fourth-chart">
+    <canvas id="fourthChart"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+  <script type="text/javascript">
+    var ctx = document.getElementById("firstChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [9, 12, 3, 5, 2, 3],
+
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        legend: {
+          labels: {
+            fontColor: "white",
+            fontSize: 18
+          }
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 10,
+              stepSize: 2,
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 12,
+              stepSize: 2,
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+
+  <script type="text/javascript">
+    var ctx = document.getElementById("secondChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [9, 12, 3, 5, 2, 3],
+
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 3,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+          ],
+        }]
+      },
+      options: {
+        legend: {
+          labels: {
+            fontColor: "white",
+            fontSize: 12
+          }
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 10,
+              stepSize: 2,
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 10,
+              stepSize: 2,
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+
+  <script type="text/javascript">
+    var ctx = document.getElementById("thirdChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [9, 12, 3, 5, 2, 3],
+
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 3,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+          ],
+        }]
+      },
+      options: {
+        legend: {
+          labels: {
+            fontColor: "white",
+            fontSize: 12
+          }
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 10,
+              stepSize: 2,
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 12,
+              stepSize: 2,
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+
+    var ctx = document.getElementById("fourthChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [9, 12, 3, 5, 2, 3],
+
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }],
+      },
+      options: {
+        maintainAspectRatio: false,
+        legend: {
+          labels: {
+            fontColor: "white",
+            fontSize: 18
+          }
+        },
+        scale: {
+          gridLines: {
+            color: "rgb(92, 95, 102)"
+          },
+          ticks: {
+            beginAtZero: true,
+            max: 16,
+            min: 0,
+            stepSize: 4,
+            backdropColor: "rgba(0,0,0, 0)",
+            fontColor: "white"
+          }
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 10,
+              stepSize: 2,
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 12,
+              stepSize: 2,
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

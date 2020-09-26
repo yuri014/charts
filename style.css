@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #221f2e;
+}
+
+section {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.first-chart,
+.second-chart,
+.third-chart,
+.fourth-chart {
+  border-radius: 12px;
+  padding: 1rem 1rem;
+  background: #2e2b3f;
+  box-shadow: 2px 2px 2px rgb(47, 48, 79), inset 1px 1px 2px rgb(47, 48, 79);
+}
+
+.first-chart {
+  margin-left: 2rem;
+  margin-top: 2rem;
+  width: 20rem;
+}
+
+.second-chart {
+  margin-left: 2rem;
+  margin-top: 2rem;
+  width: 20rem;
+  padding: 1rem 1rem;
+}
+
+.third-chart {
+  width: 42rem;
+  margin-left: 2rem;
+  margin-top: 4rem;
+}
+
+.fourth-chart {
+  width: 37rem;
+  margin-left: 46rem;
+  margin-top: 2rem;
+  height: 37rem;
+  top: 0;
+  position: absolute;
+}
+
